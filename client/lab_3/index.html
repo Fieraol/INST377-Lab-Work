@@ -22,24 +22,28 @@
         </div>
         <div class="right_section box">
           <h2>Image Carousel</h2>
-          <div class="grid">
-            <img src="images/dbr.jpeg" />
-            <img src="images/rodeo.jpg" />
-            <img src="images/bittsm.jpeg" />
-            <img src="images/astroworld.jpeg" />
+          <div class="carousel">
+            <button class="prev">prev</button>
+            <div class="slides">
+                <div class="carousel_item visible"><img id="slide_1" src="images/dbr.jpeg" alt="Travis Scott's album Days Before Rodeo"/></div>
+                <div class="carousel_item hidden"><img id="slide_2" src="images/rodeo.jpg" alt="Travis Scott's album Rodeo"/></div>
+                <div class="carousel_item hidden"><img id="slide_3" src="images/bittsm.jpeg" alt="Travis Scott's album Birds In The Trap Sing McKnight"/></div>
+                <div class="carousel_item hidden"><img id="slide_4" src="images/astroworld.jpeg" alt="Travis Scott's album Astroworld"/></div>
+            </div>
+            <button class="next">next</button>
           </div>
           <div class="box">
             <p>
-              These images seem similar, though they are 4 different image
-              formats. They are jpeg, gif, png, and svg respectively.
+              Description of the images above.
             </p>
           </div>
         </div>
       </div>
+      <footer class="footer">
+        <p>Fieraol <a href="https://github.com/Fieraol">Github account</a></p>
+      </footer>
     </div>
-    <footer class="footer">
-      <p>Fieraol <a href="https://github.com/Fieraol">Github account</a></p>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
 
