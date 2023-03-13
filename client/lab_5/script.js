@@ -4,8 +4,10 @@
 */
 
 async function mainEvent() { // the async keyword means we can make API requests
-  const form = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
-  form.addEventListener('submit', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
+  const mainForm = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
+  const filterButton = document.querySelector('.filter_button');
+
+  mainForm.addEventListener('submit', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
     submitEvent.preventDefault(); // This prevents your page from going to http://localhost:3000/api even if your form still has an action set on it
     console.log('form submission'); // this is substituting for a "breakpoint"
 
@@ -57,6 +59,10 @@ async function mainEvent() { // the async keyword means we can make API requests
     // it initially contains all 1,000 records from your request
   });
 }
+
+filterButton.addEventListener('click', (event) => {
+  console.log('clicked filterButton')
+})
 
 /*
   This adds an event listener that fires our main event only once our page elements have loaded
